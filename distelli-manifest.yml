@@ -1,4 +1,4 @@
-bmcgehee/GoBuildDeploy:
+<username>/GoBuildDeploy:
   # Distelli Manifest example
   # this example assume the build and deploy servers are 
   # The same architecture (32 vs 64 bit)
@@ -6,12 +6,6 @@ bmcgehee/GoBuildDeploy:
   # Installed Packages: apt-get
   #
   
-  Env:
-    - PORT: "8002"
-
-  PkgInclude:
-    - bin/server
-    
   PreRelease:
     - echo "Beginning PreRelease"
     - echo "Installing build dependencies"
@@ -23,6 +17,12 @@ bmcgehee/GoBuildDeploy:
     - cd src
     - go test
     
+  PkgInclude:
+    - bin/server
+    
+  Env:
+    - PORT: "8002"
+
   Exec:
     - exec ./bin/server $PORT
 

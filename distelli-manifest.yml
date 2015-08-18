@@ -16,6 +16,7 @@ bmcgehee/gobuilddeploy:
     - cd src
     - go build -o bin/server
     - go test
+    - cd ..
     
   PkgInclude:
     - bin/server

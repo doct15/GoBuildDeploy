@@ -19,7 +19,9 @@ bmcgehee/GoBuildDeploy:
     - sudo apt-get -y update
     - echo "Installing GoLang"
     - sudo apt-get -y install golang
-    - go build -o bin/server src/server.go
+    - go build -o bin/server src/*.go
+    - cd src
+    - go test
     
   Exec:
     - exec ./bin/server $PORT

@@ -13,8 +13,8 @@
     - sudo apt-get -y update
     - echo "Installing GoLang"
     - sudo apt-get -y install golang
-    - go build -o bin/server src/*.go
     - cd src
+    - go build -o bin/server
     - go test
     
   PkgInclude:

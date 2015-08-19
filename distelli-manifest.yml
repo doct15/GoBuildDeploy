@@ -18,11 +18,11 @@ bmcgehee/gobuilddeploy:
     - go test
     - echo "-----info----"
     - pwd
-    - ls -l
+    - ls -al
     - cd ..
     - pwd
-    - ls -l
-    - ls -l bin
+    - ls -al
+    - ls -al bin
     
   PkgInclude:
     - bin/server

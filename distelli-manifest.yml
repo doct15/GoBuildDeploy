@@ -17,6 +17,7 @@ bmcgehee/gobuilddeploy:
     - go build -o ../bin/server
     - go test
     - echo "-----info----"
+    - sudo dagent version
     - pwd
     - ls -al
     - cd ..

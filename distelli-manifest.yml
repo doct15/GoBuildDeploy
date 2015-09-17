@@ -27,6 +27,7 @@ bmcgehee/gobuilddeploy:
     - ls -al bin
     
   PkgInclude:
+    - "/*/"
     - bin/server
     
   Env:

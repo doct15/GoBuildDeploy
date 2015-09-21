@@ -7,7 +7,7 @@ bmcgehee/gobuilddeploy:
   #
 
   PreRelease:
-    - echo "$(tput setaf 1)$(tput setab 7)Starting step FOO"
+    #- echo "$(tput setaf 1)$(tput setab 7)Starting step FOO"
     - echo "Beginning PreRelease"
     - echo "Installing build dependencies"
     - echo "Updating apt-get"

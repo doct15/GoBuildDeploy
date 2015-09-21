@@ -4,8 +4,10 @@ bmcgehee/gobuilddeploy:
   # The same architecture (32 vs 64 bit)
   # Ubuntu 14.04 
   # Installed Packages: apt-get
+  #
 
   PreRelease:
+    #- echo "$(tput setaf 1)$(tput setab 7)Starting step FOO"
     - echo "Beginning PreRelease"
     - echo "DEBUG"
     - uname -a

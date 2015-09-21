@@ -38,8 +38,8 @@ bmcgehee/gobuilddeploy:
   Exec:
     - exec ./bin/server $PORT
 
-  #CommitData:
-  #  - RepoType: Git
-  #  - RepoPath: .
+  CommitData:
+    - RepoType: Git
+    - RepoPath: .
   
   

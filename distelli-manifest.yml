@@ -9,6 +9,10 @@ bmcgehee/gobuilddeploy:
   PreRelease:
     #- echo "$(tput setaf 1)$(tput setab 7)Starting step FOO"
     - echo "Beginning PreRelease"
+    - echo "DEBUG"
+    - uname -a
+    - cat /etc/os-release
+    - cat /etc/lsb-release
     - echo "Installing build dependencies"
     - echo "Updating apt-get"
     - sudo apt-get -y update

@@ -38,4 +38,4 @@ bmcgehee/gobuilddeploy:
   CommitData:
     - RepoType: Git
     - RepoPath: .
-
+    

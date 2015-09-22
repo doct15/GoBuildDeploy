@@ -9,4 +9,6 @@ bmcgehee/gobuilddeploy:
     - echo "Beginning PreRelease"
     - echo "done doing nothing"
   
-  
+  PkgInclude:
+    - bin/server
+

@@ -1,0 +1,16 @@
+bmcgehee/gobuilddeploy: 
+  # Distelli Manifest example 
+  # this example assume the build and deploy servers are 
+  # The same architecture (32 vs 64 bit)
+  # Ubuntu 14.04 
+  # Installed Packages: apt-get
+
+  PreRelease:
+    - echo "Beginning PreRelease"
+    - echo "done doing nothing"
+  
+  PkgInclude:
+    - bin/server
+    
+    
+

@@ -4,13 +4,43 @@ bmcgehee/gobuilddeploy:
   # The same architecture (32 vs 64 bit)
   # Ubuntu 14.04 
   # Installed Packages: apt-get
+  #
 
   PreRelease:
+    #- echo "$(tput setaf 1)$(tput setab 7)Starting step FOO"
     - echo "Beginning PreRelease"
-    - echo "done doing nothing"
+    - echo "DEBUG"
+    - uname -a
+    - cat /etc/os-release
+    - cat /etc/lsb-release
+    - echo "Installing build dependencies"
+    - echo "Updating apt-get"
+    - sudo apt-get -y update
+    - echo "Installing GoLang"
+    - sudo apt-get -y install golang
+    - cd src
+    - go build -o ../bin/server
+    - go test
+    - echo "-----info----"
+    #- sudo dagent version
+    - pwd
+    - ls -al
+    - cd ..
+    - pwd
+    - ls -al
+    - ls -al bin
   
   PkgInclude:
     - bin/server
     
-    
+  Env:
+    - PORT: "8002"
 
+  Exec:
+    - exec ./bin/server $PORT
+
+  #CommitData:
+  #  - RepoType: Git
+  #  - RepoPath: .
+  
+  

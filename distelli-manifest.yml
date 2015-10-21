@@ -23,12 +23,12 @@ bmcgehee/gobuilddeploy:
     - go test
     - echo "-----info----"
     #- sudo dagent version
-    - pwd
-    - ls -al
-    - cd ..
-    - pwd
-    - ls -al
-    - ls -al bin
+    #- pwd
+    #- ls -al
+    #- cd ..
+    #- pwd
+    #- ls -al
+    #- ls -al bin
   
   PkgInclude:
     - bin/server

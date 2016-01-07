@@ -9,3 +9,4 @@ ADD . /
 
 EXPOSE 8080
 CMD ["/bin/server", "8080"]
+ 

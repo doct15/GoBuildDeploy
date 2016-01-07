@@ -7,18 +7,8 @@ bmcgehee/gobuilddeploy:
   #
 
   PreBuild:
-    #- echo "$(tput setaf 1)$(tput setab 7)Starting step FOO"
     - echo "Beginning PreBuild"
-    - echo "DEBUG"
-    - uname -a
-    - cat /etc/os-release
-    - cat /etc/lsb-release
-    - echo "Installing build dependencies"
-    - echo "Updating apt-get"
-    - sudo apt-get -y update
-    - echo "Installing GoLang"
-    - sudo apt-get -y install golang
-    
+
   Build:
     - echo "Building"
     - cd src

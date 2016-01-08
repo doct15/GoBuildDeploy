@@ -8,6 +8,11 @@ bmcgehee/exa-go-test:
 
   PreBuild:
     - echo "Beginning PreBuild"
+    - echo "DD_USERNAME: $DISTELLI_DOCKER_USERNAME"
+    - echo "DD_PW:       $DISTELLI_DOCKER_PW"
+    - echo "DD_EMAIL:    $DISTELLI_DOCKER_EMAIL"
+    - echo "DD_REPO:     $DISTELLI_DOCKER_REPO"
+    - echo "D_BUILDNUM:  $DISTELLI_BUILDNUM"
 
   Build:
     - echo "Building"

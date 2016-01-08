@@ -36,7 +36,7 @@ bmcgehee/exa-go-test:
     - sudo /usr/bin/docker pull "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILD_NUM"
 
   Exec:
-    - sudo /usr/bin/docker run -p 80:8080 "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILD_NUM"
+    - sudo /usr/bin/docker run -p 80:8080 "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     #- exec ./bin/server $PORT
 
   #CommitData:

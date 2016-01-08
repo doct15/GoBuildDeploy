@@ -1,9 +1,10 @@
 
 # DOCKER-VERSION 0.3.4
 
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
 RUN apt-get -y update
+RUN apt-get -y install apache2
 
 ADD ./bin/server /
 

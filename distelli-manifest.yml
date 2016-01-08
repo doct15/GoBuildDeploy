@@ -13,7 +13,7 @@ bmcgehee/exa-go-test:
     - 'echo "DD_EMAIL:    $DISTELLI_DOCKER_EMAIL"'
     - 'echo "DD_REPO:     $DISTELLI_DOCKER_REPO"'
     - 'echo "D_BUILDNUM:  $DISTELLI_BUILDNUM"'
-
+ 
   Build:
     - echo "Building"
     - cd src

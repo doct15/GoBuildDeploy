@@ -5,8 +5,8 @@ FROM ubuntu:12.04
 
 RUN sudo apt-get -y update
 
-ADD . /
+ADD ./bin/server /
 
 EXPOSE 8080
-CMD ["/bin/server", "8080"]
+CMD ["/server", "8080"]
  

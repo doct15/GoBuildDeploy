@@ -7,12 +7,15 @@ bmcgehee/exa-go-test:
   #
 
   PreBuild:
-    - echo "Beginning PreBuild"
-    - 'echo "DD_USERNAME: $DISTELLI_DOCKER_USERNAME"'
-    #- 'echo "DD_PW:       $DISTELLI_DOCKER_PW"'
-    - 'echo "DD_EMAIL:    $DISTELLI_DOCKER_EMAIL"'
-    - 'echo "DD_REPO:     $DISTELLI_DOCKER_REPO"'
-    - 'echo "D_BUILDNUM:  $DISTELLI_BUILDNUM"'
+    - echo "---PreBuild---"
+    - echo "DD_USERNAME $DISTELLI_DOCKER_USERNAME"
+    #- echo "DD_PW       $DISTELLI_DOCKER_PW"
+    - echo "DD_EMAIL    $DISTELLI_DOCKER_EMAIL"
+    - echo "DD_ENDPOINT $DISTELLI_DOCKER_ENDPOINT"
+    - echo "DD_REPO     $DISTELLI_DOCKER_REPO"
+    - echo "DD_PATH     $DISTELLI_DOCKER_PATH"
+    - echo "DD_BUILDNUM $DISTELLI_BUILDNUM"
+    - echo ""
  
   Build:
     - echo "Building"
@@ -35,6 +38,17 @@ bmcgehee/exa-go-test:
     - sudo /usr/bin/docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL"
     - sudo /usr/bin/docker pull "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILD_NUM"
 
+  PostInstall:
+    - echo "---PreBuild---"
+    - echo "DD_USERNAME $DISTELLI_DOCKER_USERNAME"
+    #- echo "DD_PW       $DISTELLI_DOCKER_PW"
+    - echo "DD_EMAIL    $DISTELLI_DOCKER_EMAIL"
+    - echo "DD_ENDPOINT $DISTELLI_DOCKER_ENDPOINT"
+    - echo "DD_REPO     $DISTELLI_DOCKER_REPO"
+    - echo "DD_PATH     $DISTELLI_DOCKER_PATH"
+    - echo "DD_BUILDNUM $DISTELLI_BUILDNUM"
+    - echo ""
+    
   Exec:
     - sudo /usr/bin/docker run -rm=true -p 80:8080 "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     #- exec ./bin/server $PORT

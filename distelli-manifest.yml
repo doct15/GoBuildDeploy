@@ -48,7 +48,7 @@ bmcgehee/exa-go-test:
     - echo "DD_PATH     $DISTELLI_DOCKER_PATH"
     - echo "DD_BUILDNUM $DISTELLI_BUILDNUM"
     - echo ""
-    
+        
   Exec:
     - sudo /usr/bin/docker run -rm=true -p 80:8080 "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     #- exec ./bin/server $PORT

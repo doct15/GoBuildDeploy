@@ -15,7 +15,7 @@ bmcgehee/exa-go-test:
     - echo "DD_REPO     $DISTELLI_DOCKER_REPO"
     - echo "DD_PATH     $DISTELLI_DOCKER_PATH"
     - echo "DD_BUILDNUM $DISTELLI_BUILDNUM"
-    - echo ""
+    - echo ""   
  
   Build:
     - echo "Building"

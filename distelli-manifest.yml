@@ -16,7 +16,7 @@ bmcgehee/exa-go-test:
     - echo "DD_PATH     $DISTELLI_DOCKER_PATH"
     - echo "DD_BUILDNUM $DISTELLI_BUILDNUM"    
     - echo ""   
- 
+    
   Build:
     - echo "Building"
     - cd src

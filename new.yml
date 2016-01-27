@@ -11,3 +11,4 @@ bmcgehee/gobuilddeploy:
   
   PkgInclude:
     - bin/server
+

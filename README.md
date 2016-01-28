@@ -324,3 +324,6 @@ For more information on troubleshooting deploys see [Troubleshooting Deploys](ht
 * [Manifest Library of Examples](http://docs.distelli.com/docs/distelli-manifest-library-of-examples) 
 * Read the Knowledge Base articles
 * Check out the Reference Guides
+
+
+[![Build Status](https://travis-ci.org/doct15/gobuilddeploy.png?branch=master)](https://travis-ci.org/doct15/gobuilddeploy)

@@ -1,4 +1,4 @@
-![](http://doc.tavian.com/cgi-bin/gb1.pl?repo_name=gobuilddeploy&repo_user=doct15&repo_branch=master)
+![](http://doc.tavian.com/cgi-bin/gb1.pl?repo_name=gobuilddeploy&repo_owner=doct15&repo_branch=master)
 
 # Getting Started Building and Deploying with Distelli - Go Example
 

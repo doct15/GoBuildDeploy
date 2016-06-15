@@ -23,10 +23,10 @@ bmcgehee2/gobuilddeploy:
     - go build -o ../bin/server
     - go test
     - cd ..
-    - docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL"
-    - docker build --quiet=false -t "$DISTELLI_DOCKER_REPO" .
-    - docker tag "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
-    - docker push "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    #- docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL"
+    #- docker build --quiet=false -t "$DISTELLI_DOCKER_REPO" .
+    #- docker tag "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    #- docker push "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
 
   PkgInclude:
     - bin/server
@@ -35,7 +35,7 @@ bmcgehee2/gobuilddeploy:
     - PORT: "8080"
 
   PreInstall:
-    - sudo /usr/bin/docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL"
+    #- sudo /usr/bin/docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL"
     #- sudo /usr/bin/docker pull "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILD_NUM"
 
   PostInstall:
@@ -50,8 +50,8 @@ bmcgehee2/gobuilddeploy:
     #- echo ""
         
   Exec:
-    - sudo /usr/bin/docker run --rm=true -p 80:8080 "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
-    #- ./bin/server $PORT
+    #- sudo /usr/bin/docker run --rm=true -p 80:8080 "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    - ./bin/server $PORT
 
   #CommitData:
   #  - RepoType: Git
